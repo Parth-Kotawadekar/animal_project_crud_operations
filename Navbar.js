@@ -1,0 +1,44 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const Navbar = () => {
+  return (
+    <>
+      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#5BD3C7', color: "#E0E4EE", fontSize:"bold", fontFamily:"Arial", fontWeight:'Bold' }}>
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <Link to="/dashboard" class="nav-link active" aria-current="page" href="#">LAYERED PROCESS AUDIT</Link></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <Link to='/menu' class="nav-link active" aria-current="page" href="#">MENU</Link>
+                  </li>
+
+                  <li class="nav-item">
+                    <Link to='/dashboard' class="nav-link active" aria-current="page" href="#">DASHBOARD</Link>
+                  </li>
+                  {/* <li class="nav-item">
+                    <Link to='/login_page' class="nav-link active" aria-current="page" href="#">Login/ Signin
+                      <select>
+                        <option>Login</option>
+                        <option>Sign-in</option>
+                      </select>
+                    </Link>
+                  </li> */}
+
+                  <li class="nav-item">
+                    <Link to='/login' class="nav-link active"  aria-current="page" href="#">Login</Link>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </nav>
+    </>
+  )
+}
+
+export default Navbar
